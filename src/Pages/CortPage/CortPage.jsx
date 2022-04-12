@@ -104,7 +104,8 @@ function CortPage() {
 
 
   function pushDataOrder() {
-
+    setCountProdSum(0)
+    setCountP(0)
     localStorage.removeItem("basket");
     const options = {
       url: "https://still-island-00146.herokuapp.com/api/v1/store/order/",
