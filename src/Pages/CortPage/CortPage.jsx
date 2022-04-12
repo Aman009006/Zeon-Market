@@ -101,7 +101,11 @@ function CortPage() {
     setOrderBas(objNew);
   }
 
+
+
   function pushDataOrder() {
+
+    localStorage.removeItem("basket");
     const options = {
       url: "https://still-island-00146.herokuapp.com/api/v1/store/order/",
       method: "POST",
@@ -132,9 +136,12 @@ function CortPage() {
     };
 
     axios(options).then((response) => {
-      console.log(response.status);
+      response.status === 200 && setShowOk(true)
     });
   }
+  const [showOk, setShowOk] = useState(false);
+
+  // countp  < 1 && setCountProdSum(0)
 
   return (
     <div>
@@ -160,7 +167,7 @@ function CortPage() {
               <p className="cort__total-title">Сумма заказа</p>
               <div className="count__total">
                 <p>Количество линеек:</p>
-                <p className="price__cort">{basket.length} шт</p>
+                <p className="price__cort">{basket?.length} шт</p>
               </div>
               <div className="count__total">
                 <p>Количество товаров:</p>
@@ -194,6 +201,26 @@ function CortPage() {
       </div>
       <Footer />
       <div className="popup">
+      { showOk ?
+      <Modal
+        show={show}
+        onHide={handleClose}
+        backdrop="static"
+        keyboard={false}
+      >
+        <Modal.Body>
+          <div className="modal_class">
+            <img src="/images/thanks.svg" /> <h2>Спасибо!</h2>
+            <p>Ваша заявка была принята ожидайте, скоро Вам перезвонят</p>
+          </div>
+        </Modal.Body>
+        <Modal.Footer>
+          <button onClick={() => setShow(false)} className="collback__modal_bl">
+            Продолжить покупки
+          </button>
+        </Modal.Footer>
+      </Modal>
+        :
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>Оформление заказа</Modal.Title>
@@ -274,7 +301,7 @@ function CortPage() {
               Заказать
             </button>
           </Modal.Body>
-        </Modal>
+        </Modal>}
       </div>
     </div>
   );

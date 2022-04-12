@@ -9,6 +9,7 @@ function CollbackModal() {
 
   const [showBtn, setShowBtn] = useState(false);
   const [showOk, setShowOk] = useState(false);
+  
 
   const [postName, setPostName] = useState("");
   const [postNum, setPostNum] = useState("");

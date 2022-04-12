@@ -173,14 +173,14 @@ function NavBar({ handleData, getWord }) {
             <div className="nav__btns">
               <button className="nav__btn" id="favorite__btn">
                 <img src="/images/icons/favorite.svg" />{" "}
-               {favorite.length > 0 && <div className="red__circle"></div>}
+               {favorite?.length > 0 && <div className="red__circle"></div>}
                 <span className="btn__title">
                   <NavLink to="/favorite">Избранное</NavLink>
                 </span>
               </button>
               <div className="line"></div>
               <button className="nav__btn" id="cort__btn">
-                {basket.length>0 && <div className="red__circle"></div>}
+                {basket?.length>0 && <div className="red__circle"></div>}
                 <img src="/images/icons/cort.svg" />{" "}
                 <span className="btn__title">
                   <NavLink to="/cort">Корзина</NavLink>{" "}
