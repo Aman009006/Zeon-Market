@@ -1,0 +1,182 @@
+.card__sort {
+    width: 768px ;
+    height: 185px;
+    padding: 12px;
+    background: white;
+    position: relative;
+    .close__cort{
+        position: absolute;
+        right: 17px;
+        top: 17px;
+    }
+  }
+.cort__card {
+    margin-top: 10px;
+  &-item {
+    display: flex;
+    align-items: center;
+    width: 290px;
+    margin: 0px;
+  }
+  .card__color {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: #7c7c7c;
+    margin: 0;
+    padding: 6px;
+  }
+  #black {
+    margin: 0;
+  }
+}
+.count {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 120px;
+  height: 32px;
+  margin-top: 12px;
+  h2 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #393939;
+    margin: 0;
+  }
+  button {
+    background: #f8f8f8;
+    border: 1px solid #efefef;
+    border-radius: 6px;
+    width: 32px;
+    height: 32px;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  
+  .card__sort{
+     width: 650px;
+  }
+  
+
+ }
+ @media only screen and (max-width: 940px) {
+  
+  .card__sort{
+     width: 450px;
+  }
+  
+
+ }
+ @media only screen and (max-width: 750px) {
+  
+
+
+ }
+
+@media only screen and (max-width: 450px) {
+   .close__cort{
+       width: 10px;
+       height: 10px;
+   }
+   .card__cort{
+       padding: 10px;
+   }
+   .card__color{
+       padding: 2px !important;
+   }
+    .cort__card-item{
+        width: 215px;
+        p{
+            padding: 3px;
+        }
+        .count{
+            margin-top: 5px;
+            width: 100px;
+        }
+    }
+    .card__sort{
+      max-width: 450px;
+      width: 100%;
+    }
+
+  }
+  .cart__title{
+    width: 180px !important;
+  }
+  #DarkKhaki {
+    background: DarkKhaki;
+    border-radius: 50%;
+    width: 8px !important;
+    height: 8px !important;
+    margin: 10px;
+  }
+  #antiqueWhite {
+    background: antiqueWhite;
+    border-radius: 50%;
+    width: 7px !important;
+    height: 7px!important;
+    border: 1px solid #d1d1d1;
+    margin: 10px;
+  
+  }
+  #Thistle {
+    background: Thistle;
+    border-radius: 50%;
+    width: 8px !important;
+    height: 8px!important;
+    margin: 10px;
+  
+  }
+  #SteelBlue {
+    background: SteelBlue;
+    border-radius: 50%;
+    width: 8px !important;
+    height: 8px !important;
+    margin: 10px;
+  
+  }
+  #MidnightBlue {
+    background: MidnightBlue;
+    border-radius: 50%;
+    width: 8px !important;
+    height: 8px !important;
+    margin: 10px;
+  
+  }
+  #LightCoral {
+    background: LightCoral;
+    border-radius: 50%;
+    width: 8px !important;
+    height: 8px !important;
+    margin: 10px;
+  
+  }
+  #Lavender {
+    background: Lavender;
+    border-radius: 50%;
+    width: 8px !important;
+    height: 8px !important;
+    margin: 10px;
+  
+  }
+  #SlateBlue {
+    background: SlateBlue;
+    border-radius: 50%;
+    width: 8px !important;
+    height: 8px !important;
+    margin: 10px;
+  
+  }
+  .close__cort{
+    cursor: pointer;
+  }
+  .cort__card-item{
+    img{
+      width: 112px;
+      height: 150px;
+    }
+  }

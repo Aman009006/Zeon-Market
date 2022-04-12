@@ -1,0 +1,29 @@
+.slider{
+  margin-top: 11px;
+  .right.carousel-control,
+.left.carousel-control {
+  display: none;
+}
+.carousel-control-prev-icon {
+  display: none;
+}
+.carousel-control-next-icon {
+  display: none;
+}
+.carousel-indicators {
+  margin: 0px;
+  margin-bottom: -30px;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 8px !important;
+  height: 8px !important;
+  border: 1px solid black !important;
+  border-radius: 10px;
+  background: none;
+}
+.carousel-indicators .active {
+  background: #000;
+}
+
+}

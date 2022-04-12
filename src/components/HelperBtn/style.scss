@@ -1,0 +1,44 @@
+
+ .container{
+    .help__map{
+        position: fixed;
+        bottom: 250px;
+        right: 10%;
+        margin: 0px;
+        z-index: 99;
+    }
+    .default__helper{
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .up__img{
+        padding-bottom: 30px;
+        cursor: pointer;
+        display: flex;
+            justify-content: end;
+        img{
+            display: flex;
+            justify-content: end;
+        margin: 0px;
+        }
+    }
+    .closechat{
+        margin-left: 22px;
+        margin-right: 1px;
+    }
+    // .helper__icon{
+    //     margin-left: 6px;
+    // }
+    .helper__icons{
+display: flex;
+align-items: center;
+justify-content: space-between;
+width: 150px;
+    }
+}
+
+.dn{
+    display: none;
+}

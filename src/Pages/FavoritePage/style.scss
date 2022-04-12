@@ -1,0 +1,15 @@
+.favorite {
+  h2 {
+    text-align: left;
+  }
+  &__items{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #979797;
+  }
+  &__cards{
+      display: flex;
+      flex-wrap: wrap;
+  }
+}

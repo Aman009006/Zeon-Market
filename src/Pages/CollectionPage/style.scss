@@ -1,0 +1,12 @@
+.collection__content{
+    h2{
+        text-align: start;
+        margin-top: 32px;
+        margin-bottom: 18px;
+        padding: 10px;
+    }
+    .collection__items{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,47 @@
+.collection {
+    &__cards {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &__title {
+      margin-bottom: 16px;
+      margin-top: 60px;
+    }
+    &__btn {
+      background: #1d1d1b;
+      width: 107px;
+      height: 32px;
+      color: white;
+      border: none;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 16px;
+      margin-top: 24px;
+      cursor: pointer;
+    }
+  }
+  
+  .collection__cards-mobile{
+    display: none;
+  }
+  .desktop{
+    display: block;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .collection__cards-mobile{
+      display: block;
+    }
+    .collection__cards{
+     display: none;
+    }
+    .collection__item{
+      margin: 10px auto;
+    }
+    .collection__item-btn{
+      margin-right: 0px;
+    }
+    .desktop{
+      display: none;
+    }
+  }

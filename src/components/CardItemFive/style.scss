@@ -1,0 +1,212 @@
+* {
+    margin: 0px auto;
+    padding: 0px auto;
+  }
+  .card__smoll{
+    height: 420px;
+    width: 226px;
+    margin-top: 8px;
+    position: relative;
+  
+    .smoll_img{
+        width: 226px;
+        height: 332px;
+    }
+    &__descr_smoll {
+      width: 226px !important;
+      height: 88px !important;
+      margin: 0px auto;
+      margin-top: -3px;
+    }
+    &__img {
+
+      margin: 0px;
+    }
+    &__title {
+      padding: 6px;
+      text-align: left;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: #393939;
+      margin: 0px;
+    }
+    &__price {
+      text-align: left;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      color: #393939;
+      padding-left: 6px;
+      margin: 0px;
+    }
+    &__subtitle {
+      text-align: left;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 16px;
+      color: #7c7c7c;
+      padding: 6px;
+      margin: 0px;
+    }
+  
+    &__colors {
+      width: 162px;
+      height: 16px;
+      display: flex;
+      align-items: center;
+      margin: 0px;
+    }
+    .right.carousel-control,
+    .left.carousel-control {
+      display: none;
+    }
+    .carousel-control-prev-icon {
+      display: none;
+    }
+    .carousel-control-next-icon {
+      display: none;
+    }
+    .carousel-indicators {
+      margin: 0px;
+      margin-bottom: -5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .carousel-indicators [data-bs-target] {
+      width: 63px !important;
+    }
+  }
+  #DarkKhaki {
+    background: DarkKhaki;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    margin: 10px;
+  }
+  #antiqueWhite {
+    background: antiqueWhite;
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+    border: 1px solid #d1d1d1;
+    margin: 10px;
+  
+  }
+  #Thistle {
+    background: Thistle;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    margin: 10px;
+  
+  }
+  #SteelBlue {
+    background: SteelBlue;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    margin: 10px;
+  
+  }
+  #MidnightBlue {
+    background: MidnightBlue;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    margin: 10px;
+  
+  }
+  #LightCoral {
+    background: LightCoral;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    margin: 10px;
+  
+  }
+  #Lavender {
+    background: Lavender;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    margin: 10px;
+  
+  }
+  #SlateBlue {
+    background: SlateBlue;
+    border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    margin: 10px;
+  
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .card {
+      width: 262px;
+      height: 500px;
+  &__descr{
+    width: 260px;
+  }
+    }
+    
+  }
+  
+  .card__container{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    .sale{
+      margin: 0px;
+    
+
+    border-top: 50px solid #E5271B;
+    border-right: 50px solid transparent;
+    p{
+    transform: rotate(-45deg);
+    position: absolute;
+    left: -0px;
+    top: -0px;
+    padding: 7px;
+    color: white;
+    font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+    }
+    }
+   
+  }
+  .like_card{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin: 0px;
+  padding: 12px;
+  z-index: 99;
+  
+  }
+  .card{
+    position: relative;
+  }
+  .card__price_old{
+    font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  text-decoration-line: line-through;
+  color: #ADADAD;
+  margin: 0px;
+  margin-left: 10px;
+  
+  }
+  .price__old__p{
+    display: flex;
+    
+  }
+ 
