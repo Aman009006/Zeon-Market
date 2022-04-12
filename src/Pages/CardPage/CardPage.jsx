@@ -154,7 +154,7 @@ function CardPage() {
           </Carousel>
         </div>
 
-        <div className="card__page-title">
+        <div className="card__page-title hier">
           <h2>{cards.name}</h2>
           <div className="cpt">
             {" "}

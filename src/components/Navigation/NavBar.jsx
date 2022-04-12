@@ -51,6 +51,8 @@ function NavBar({ handleData, getWord }) {
         return "Избранные";
       case "help":
         return "Помощь";
+        case "cort":
+        return "Корзина";
       default:
         return folder;
     }
@@ -355,19 +357,34 @@ function NavBar({ handleData, getWord }) {
         </div>
       )}
 
-      {bread && (
         <div className=" breadcrum-mobile">
-          <div className="container">
-            <div>
-              <a className="" href="/">
-                Главная
-              </a>
-
-              <a active>{lockBr}</a>
+        {bread && (
+          <div className=" breadcrum">
+            <div className="container">
+              <div>
+                <a className="" href="/">
+                  Главная
+                </a>
+                {folders.map((folder, index) => {
+                  return (
+                    <>
+                      <span>/</span>
+                      <NavLink
+                        to={
+                          "/" +
+                          folders.filter((fold, i) => i <= index).join("/")
+                        }
+                      >
+                        <span>{translate(folder)}</span>
+                      </NavLink>
+                    </>
+                  );
+                })}
+              </div>
             </div>
           </div>
+        )}
         </div>
-      )}
       <div className="container">
         <HelperBtn />
       </div>

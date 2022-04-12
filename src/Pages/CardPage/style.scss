@@ -202,5 +202,47 @@ display: block;
   .desktop{
     display: none;
   }
+  .about__prod-title {
+    
+
+
+  font-weight: 400 !important;
+  font-size: 13px !important;
+  line-height: 180% !important;
+  color: #6a6a6a;
+  height: 130px !important;
+
+  }
+  h2{
+    font-weight: 500;
+font-size: 18px;
+line-height: 22px;
+  }
+  p{
+    font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+  }
+  .about__card-page{
+    .div{
+      display: block !important;
+    }
+    
+  }
+  .card__page-title{
+    height: 540px !important;
+    max-height: 550px;
+  }
+  .hier{
+    height: 540px !important;
+  }
+  .size__card{
+    p{
+      text-align: left !important;
+      margin: 0px;
+      margin-bottom: 13px;
+      
+    }
+  }
 
 }
