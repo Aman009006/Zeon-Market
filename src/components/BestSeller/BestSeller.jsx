@@ -7,10 +7,6 @@ import "./style.scss";
 
 function BestSeller() {
 
-
-
-
-
   const [cards, setCards] = useState([]);
   const [limit,setLimit]=useState(8)
 

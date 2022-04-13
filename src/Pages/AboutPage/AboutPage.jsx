@@ -17,6 +17,15 @@ function AboutPage() {
         console.log(error);
       });
   }, []);
+
+
+  function cutTags  (str)  {
+  
+    return str.replace(/<\/?[^>]+(>|$)/gi, "").replace(/&nbsp;/gi, " ");
+    
+  };
+
+
   return (
     <div>
       <div className="container about">
@@ -35,7 +44,7 @@ function AboutPage() {
         <div className="about__title">
           <h2>{cards.about_us_title}</h2>
           <p>
-          {cards.about_us_text}
+          {cutTags(cards ? (cards.about_us_text || '') : '')}
           </p>
         </div>
       </div>

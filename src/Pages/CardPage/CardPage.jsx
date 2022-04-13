@@ -12,9 +12,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 function CardPage() {
   const param = useParams();
 
- 
   let idProd = param.id;
-  const [cards, setCards] = useState([]);
+  const [cards, setCards] = useState({});
   const [extraCard, setExtraCard] = useState([]);
 
   const [likepage, setLikePage] = useState(false);
@@ -44,6 +43,7 @@ function CardPage() {
       `https://still-island-00146.herokuapp.com/api/v1/store/product/${idProd}/`
     )
       .then(function (response) {
+      
         setCards(response.data);
         console.log(cards);
       })
@@ -119,11 +119,12 @@ function CardPage() {
     return;
   }
 
-
-
-
-
+  function cutTags  (str)  {
   
+    return str.replace(/<\/?[^>]+(>|$)/gi, "").replace(/&nbsp;/gi, " ");
+    
+  };
+
   return (
     <div>
       <div className="container card__page">
@@ -168,7 +169,7 @@ function CardPage() {
               return <div className="clrs" id={color.name}></div> 
             })} */}
             {cards?.children_products?.map((image) => {
-              return <div className="clrs" id={image.color}></div>;
+              return <div className="clrs" id={image.color_name}></div>;
             })}
             {/* {cards.colors.map(color => {
 
@@ -184,7 +185,7 @@ function CardPage() {
             )}
           </div>
           <p className="about__prod">О товаре:</p>
-          <p className="about__prod-title">{cards.description}</p>
+          <p className="about__prod-title">{cutTags(cards ? (cards.description || '') : '')}</p>
           <div className="about__card-page">
             <div className="div ">
               <div className="size__card">
