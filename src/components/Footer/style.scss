@@ -31,14 +31,29 @@
 .df {
   display: flex;
   align-items: center;
-  width: 140px;
+  width: 170px;
   margin: 0;
+  a{
+    font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+margin: 0;
+
+  }
+  margin-bottom: 16px;
 }
 .dff {
   display: flex;
   align-items: center;
   width: 98px;
   margin: 0;
+  a{
+    font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+  }
+  margin-bottom: 16px;
+
 }
 .footer__desck {
   width: 240px;
@@ -53,13 +68,12 @@
     color: #e2e2e2;
   }
   a {
-    margin-bottom: 12px;
     text-align: left;
     display: block;
     text-decoration: none;
     font-weight: 400;
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 14px;
+    line-height: 17px;
     letter-spacing: 0.04em;
     color: #ffffff;
     img {
@@ -67,8 +81,18 @@
     }
   }
 }
+.footer__desck{
+  font-weight: 600;
+font-size: 16px;
+line-height: 20px;
 .footer__title-p{
   font-weight: 600;
 font-size: 16px;
 line-height: 20px;
+}
+}
+.only{
+  a{
+    margin-bottom: 16px;
+  }
 }

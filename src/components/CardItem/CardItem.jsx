@@ -101,7 +101,7 @@ function CardItem(props) {
           </p>
           <div className="card__colors">
             {props.card?.children_products?.map((image) => (
-              <div id={image.color_name}></div>
+              <div  id={image.color_name}></div>
             ))}
           </div>
         </div>

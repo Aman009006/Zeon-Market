@@ -1,0 +1,91 @@
+BEGIN:VCALENDAR
+METHOD:REQUEST
+PRODID:Microsoft Exchange Server 2010
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:Belarus Standard Time
+BEGIN:STANDARD
+DTSTART:16010101T000000
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0300
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:16010101T000000
+TZOFFSETFROM:+0300
+TZOFFSETTO:+0300
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+ORGANIZER;CN=Yauheniya Pakrouskaya:mailto:yauheniya.pakrouskaya@yellow.syst
+ ems
+ATTENDEE;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE;CN=aman@front
+ end.edu.kg:mailto:aman@frontend.edu.kg
+ATTENDEE;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=TRUE;CN=Ilya Galit
+ sa:mailto:ilya.galitsa@yellow.systems
+DESCRIPTION;LANGUAGE=ru-RU:https://huntflow.ru/my/yellow#vacancy/2723064/fi
+ lter/120996\n\n___________________________________________________________
+ _____________________\nСобрание Microsoft Teams\nПрисоеди
+ ниться на компьютере или в мобильном при
+ ложении\nЩелкните здесь\, чтобы присоеди
+ ниться к собранию<https://teams.microsoft.com/l/meetup-join
+ /19%3ameeting_ZjE5ZWQ4YTEtZGUzYi00OTQ2LTliYmUtNWUwZDYyNmI3ZTkw%40thread.v2
+ /0?context=%7b%22Tid%22%3a%22468acd66-e987-4004-9f24-a51bcbb3559c%22%2c%22
+ Oid%22%3a%220791d0fe-34aa-4bdc-b47f-20d98e527070%22%7d>\nПодробне
+ е<https://aka.ms/JoinTeamsMeeting> | Параметры собраний<
+ https://teams.microsoft.com/meetingOptions/?organizerId=0791d0fe-34aa-4bdc
+ -b47f-20d98e527070&tenantId=468acd66-e987-4004-9f24-a51bcbb3559c&threadId=
+ 19_meeting_ZjE5ZWQ4YTEtZGUzYi00OTQ2LTliYmUtNWUwZDYyNmI3ZTkw@thread.v2&mess
+ ageId=0&language=ru-RU>\n_________________________________________________
+ _______________________________\n________________________________\n[https:
+ //images.ctfassets.net/0nm5vlv2ad7a/18MdBH5JuXTmVMO2ssJZ9G/074d34b60f0a979
+ 14864865f7e4e9836/________________________1.png]<https://yellow.systems/>\
+ n\nYauheniya Pakrouskaya\n\nRecruiter\n\nhttps://yellow.systems<https://ye
+ llow.systems/>\n
+UID:040000008200E00074C5B7101A82E0080000000052BCCFDC1C50D801000000000000000
+ 010000000ACBCE6D7D3995C40B50BA1BA6786E5A0
+SUMMARY;LANGUAGE=ru-RU:Interveiw with Yellow:  Mamashov Aman (Front-end eng
+ ineer)
+DTSTART;TZID=Belarus Standard Time:20220415T130000
+DTEND;TZID=Belarus Standard Time:20220415T140000
+CLASS:PUBLIC
+PRIORITY:5
+DTSTAMP:20220414T163000Z
+TRANSP:OPAQUE
+STATUS:CONFIRMED
+SEQUENCE:0
+LOCATION;LANGUAGE=ru-RU:
+X-MICROSOFT-CDO-APPT-SEQUENCE:0
+X-MICROSOFT-CDO-OWNERAPPTID:2120511826
+X-MICROSOFT-CDO-BUSYSTATUS:TENTATIVE
+X-MICROSOFT-CDO-INTENDEDSTATUS:BUSY
+X-MICROSOFT-CDO-ALLDAYEVENT:FALSE
+X-MICROSOFT-CDO-IMPORTANCE:1
+X-MICROSOFT-CDO-INSTTYPE:0
+X-MICROSOFT-ONLINEMEETINGINFORMATION:{"OnlineMeetingChannelId":null\,"Onlin
+ eMeetingProvider":3}
+X-MICROSOFT-SKYPETEAMSMEETINGURL:https://teams.microsoft.com/l/meetup-join/
+ 19%3ameeting_ZjE5ZWQ4YTEtZGUzYi00OTQ2LTliYmUtNWUwZDYyNmI3ZTkw%40thread.v2/
+ 0?context=%7b%22Tid%22%3a%22468acd66-e987-4004-9f24-a51bcbb3559c%22%2c%22O
+ id%22%3a%220791d0fe-34aa-4bdc-b47f-20d98e527070%22%7d
+X-MICROSOFT-SCHEDULINGSERVICEUPDATEURL:https://api.scheduler.teams.microsof
+ t.com/teams/468acd66-e987-4004-9f24-a51bcbb3559c/0791d0fe-34aa-4bdc-b47f-2
+ 0d98e527070/19_meeting_ZjE5ZWQ4YTEtZGUzYi00OTQ2LTliYmUtNWUwZDYyNmI3ZTkw@th
+ read.v2/0
+X-MICROSOFT-SKYPETEAMSPROPERTIES:{"cid":"19:meeting_ZjE5ZWQ4YTEtZGUzYi00OTQ
+ 2LTliYmUtNWUwZDYyNmI3ZTkw@thread.v2"\,"rid":0\,"mid":0\,"uid":null\,"priva
+ te":true\,"type":0}
+X-MICROSOFT-ONLINEMEETINGCONFLINK:conf:sip:yauheniya.pakrouskaya@yellow.sys
+ tems\;gruu\;opaque=app:conf:focus:id:teams:2:0!19:meeting_ZjE5ZWQ4YTEtZGUz
+ Yi00OTQ2LTliYmUtNWUwZDYyNmI3ZTkw-thread.v2!0791d0fe34aa4bdcb47f20d98e52707
+ 0!468acd66e98740049f24a51bcbb3559c
+X-MICROSOFT-EVENTPROPERTIESTODELETE:0
+X-MICROSOFT-DONOTFORWARDMEETING:FALSE
+X-MICROSOFT-DISALLOW-COUNTER:FALSE
+X-MICROSOFT-LOCATIONS:[]
+BEGIN:VALARM
+DESCRIPTION:REMINDER
+TRIGGER;RELATED=START:-PT15M
+ACTION:DISPLAY
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -2,7 +2,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+img{
+  min-width: 138px;
+}
   &__img {
     display: flex;
     align-items: center;
@@ -41,6 +43,7 @@
 }
 .ml-20 {
   margin-left: 10px;
+  margin-left: 24px;
 }
 @media only screen and (max-width: 880px) {
   .about {
@@ -57,9 +60,12 @@
   }
 }
 @media only screen and (max-width: 400px) {
+  .ml-20{
+    margin-left: 12px;
+  }
     .about {
       &__title {
-       max-width: 240px;
+       max-width: 300px;
       }
     }
   }

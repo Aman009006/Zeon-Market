@@ -137,7 +137,8 @@ function CortPage() {
     };
 
     axios(options).then((response) => {
-      response.status === 200 && setShowOk(true)
+      response.status == 200  && setShowOk(true)
+      console.log(response.status);
     });
   }
   const [showOk, setShowOk] = useState(false);
@@ -161,7 +162,7 @@ function CortPage() {
             );
           })}
         </div>
-        <div className="cort__total">
+        <div className={basket?.length === 0 ? 'opaci' :"cort__total"}>
           {showAll && (
             <div>
               {" "}
@@ -172,7 +173,7 @@ function CortPage() {
               </div>
               <div className="count__total">
                 <p>Количество товаров:</p>
-                <p className="price__cort">{countp} шт</p>
+                <p className="price__cort">{countp * 5} шт</p>
               </div>
               <div className="count__total">
                 <p>Стоимость:</p>
@@ -214,22 +215,21 @@ function CortPage() {
             <img src="/images/thanks.svg" /> <h2>Спасибо!</h2>
             <p>Ваша заявка была принята ожидайте, скоро Вам перезвонят</p>
           </div>
-        </Modal.Body>
-        <Modal.Footer>
-          <button onClick={() => setShow(false)} className="collback__modal_bl">
+           <button onClick={() => setShow(false)} className="collback__modal_bl">
             Продолжить покупки
           </button>
-        </Modal.Footer>
+        </Modal.Body>
+       
       </Modal>
         :
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>Оформление заказа</Modal.Title>
           </Modal.Header>
           <Modal.Body>
+          <h2 className="order_of">Оформление заказа</h2>
             <div className="modal__inputfor">
               <p>Ваше имя</p>
-              <input
+              <input className='input_for_mod'
                 onChange={takeData}
                 name="name"
                 placeholder="Например Иван"
@@ -237,7 +237,7 @@ function CortPage() {
             </div>
             <div className="modal__inputfor">
               <p>Ваше фамилия</p>
-              <input
+              <input className='input_for_mod'
                 onChange={takeData}
                 name="surname"
                 placeholder="Например Иванов"
@@ -245,7 +245,7 @@ function CortPage() {
             </div>
             <div className="modal__inputfor">
               <p>Электронная почта</p>
-              <input
+              <input className='input_for_mod'
                 onChange={takeData}
                 name="mail"
                 placeholder="example@gmail.com"
@@ -263,7 +263,7 @@ function CortPage() {
                   <option>🇰🇵 +7</option>
                   <option>🇰🇷 +34</option>
                 </select>
-                <input
+                <input className='input_for_mod'
                   onChange={takeData}
                   name="number"
                   placeholder="Введите номер телефона"
@@ -272,7 +272,7 @@ function CortPage() {
             </div>
             <div className="modal__inputfor">
               <p>Страна</p>
-              <input
+              <input className='input_for_mod'
                 onChange={takeData}
                 name="country"
                 placeholder="Введите страну"
@@ -280,7 +280,7 @@ function CortPage() {
             </div>
             <div className="modal__inputfor">
               <p>Город</p>
-              <input
+              <input className='input_for_mod'
                 onChange={takeData}
                 name="city"
                 placeholder="Введите город"

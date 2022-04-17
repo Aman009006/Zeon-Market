@@ -135,6 +135,9 @@ a{
   a{
     margin-right: 12px;
   }
+  span{
+    margin-left: 12px;
+  }
 }
 .line {
   width: 24px;
@@ -167,6 +170,9 @@ a{
     display: block;
     a{
       margin-right: 12px;
+    }
+    span{
+      margin-left: 12px;
     }
   }
   .close{
@@ -278,14 +284,13 @@ a{
   display: flex;
   max-width: 625px;
   width: 100%;
+  margin: 0;
 }
 
 .search__history_tab{
   max-width: 701px;
   width: 100%;
   background: white !important;
-  padding: 10px 0px 10px 7px;
-  border: 1px solid #D3D3D3;
   position: relative;
 
 }
@@ -297,10 +302,10 @@ a{
 }
 .posit{
   position: absolute;
-  left: 0px;
+  // left: 0px;
   z-index: 999;
   background: white;
-  max-width: 701px;
+  max-width: 625px;
   width: 100%;
   border: 1px solid #D3D3D3;
 
@@ -315,15 +320,15 @@ a{
 }
 
 .search__history_tab__tab{
-  max-width: 701px;
+  max-width: 625px;
   width: 100%;
   background: white !important;
-  padding: 10px 0px 10px 7px;
+  // padding: 10px 0px 10px 7px;
   position: relative;
 
 }
 .wh_history__tab{
-  padding: 16px 0px 16px 20px;
+  // padding: 16px 0px 16px 20px;
   cursor: pointer;
 
 }
@@ -332,12 +337,12 @@ a{
   left: 0px;
   z-index: 999;
   background: white;
-  max-width: 701px;
+  max-width: 625px;
   width: 100%;
 }
 @media only screen and (max-width: 750px) {
   .search__history_tab__tab{
-    max-width: 701px;
+    max-width: 625px;
     width: 100%;
     background: none !important;
     padding: 0px !important;
@@ -345,7 +350,7 @@ a{
   
   }
   .search__history_tab{
-    max-width: 701px;
+    max-width: 625px;
     width: 100%;
     background: none !important;
     padding: 0px !important;

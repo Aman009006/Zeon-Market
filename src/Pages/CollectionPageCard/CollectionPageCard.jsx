@@ -36,10 +36,8 @@ console.log(param);
         <h2> {'Коллекция '+ param.id}</h2>
         <div className="collection__items">
         {collection?.map(card => {
-          console.log('====================================');
-          console.log(collection);
-          console.log('====================================');
-            return <CardItem card={card}/>
+        
+            return <div className="cardcoll"><CardItem card={card}/></div>
         })}
 
         </div>

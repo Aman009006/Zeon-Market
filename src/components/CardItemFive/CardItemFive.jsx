@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { NavLink } from "react-router-dom";
-import axios from "axios";
 import "./style.scss";
 
 function CardItemFive(props) {
@@ -10,9 +9,7 @@ function CardItemFive(props) {
   const [likeProd, setLikeProd] = useState(false);
 
   const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-  function asdL() {
-    JSON.parse(localStorage.getItem("favorites"));
-  }
+  
   function Up(){
     window.scrollTo(0,0)
   }

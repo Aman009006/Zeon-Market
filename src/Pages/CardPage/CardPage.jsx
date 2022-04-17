@@ -43,7 +43,6 @@ function CardPage() {
       `https://still-island-00146.herokuapp.com/api/v1/store/product/${idProd}/`
     )
       .then(function (response) {
-      
         setCards(response.data);
         console.log(cards);
       })
@@ -119,11 +118,9 @@ function CardPage() {
     return;
   }
 
-  function cutTags  (str)  {
-  
+  function cutTags(str) {
     return str.replace(/<\/?[^>]+(>|$)/gi, "").replace(/&nbsp;/gi, " ");
-    
-  };
+  }
 
   return (
     <div>
@@ -169,7 +166,7 @@ function CardPage() {
               return <div className="clrs" id={color.name}></div> 
             })} */}
             {cards?.children_products?.map((image) => {
-              return <div className="clrs" id={image.color_name}></div>;
+              return <div  className="clrs" id={image.color_name}></div>;
             })}
             {/* {cards.colors.map(color => {
 
@@ -185,7 +182,9 @@ function CardPage() {
             )}
           </div>
           <p className="about__prod">О товаре:</p>
-          <p className="about__prod-title">{cutTags(cards ? (cards.description || '') : '')}</p>
+          <p className="about__prod-title">
+            {cutTags(cards ? cards.description || "" : "")}
+          </p>
           <div className="about__card-page">
             <div className="div ">
               <div className="size__card">

@@ -48,10 +48,12 @@
 
 @media only screen and (max-width: 500px) {
     .collection__item{
+      .ccc{
         img{
 
             width: 260px;
         }
+      }
         &-btn{
             width: 260px;
         }
@@ -59,4 +61,7 @@
             width: 260px !important;
         }
     }
+    }
+    .white_arr{
+        margin-left: 12px;
     }

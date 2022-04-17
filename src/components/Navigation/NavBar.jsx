@@ -53,6 +53,8 @@ function NavBar({ handleData, getWord }) {
         return "Помощь";
         case "cort":
         return "Корзина";
+        case "public":
+        return "Публичная оферта";
       default:
         return folder;
     }
@@ -81,8 +83,7 @@ function NavBar({ handleData, getWord }) {
   function searchValue(e) {
     setWords(e.target.value);
     // setOpensearch(true)
-    Navigate("/search");
-
+    
     axios(
       `https://still-island-00146.herokuapp.com/api/v1/store/products/?search=${words}`
     )
@@ -93,10 +94,11 @@ function NavBar({ handleData, getWord }) {
       .catch(function (error) {
         console.log(error);
       });
+
   }
   const [searchHis, setSearchHis] = useState(false);
   // console.log(location.pathname);
-
+  console.log(words.length);
   // words.length = 0 && setSearchHis(false)
 
   return (
@@ -146,12 +148,16 @@ function NavBar({ handleData, getWord }) {
                     value={words}
                     onChange={(e) => {
                       searchValue(e);
-                      setSearchHis(true);
+                      words.length === 0 ? setSearchHis(false):setSearchHis(true); 
                     }}
                     className="search__input"
                   />
                   <button
-                    onClick={() => setSearchHis(false)}
+                    onClick={() => {
+                    setSearchHis(false)
+                    Navigate("/search")
+                    }
+                    }
                     className="search__btn"
                   >
                     <img src="/images/icons/search.svg" />

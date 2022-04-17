@@ -43,13 +43,14 @@ function CollbackModal() {
   const handleShow = () => setShow(true);
 
   return (
-    <>
+    <div className="collback">
       <button className="bn" variant="primary" onClick={handleShow}>
         <img src="/images/phonehelper.svg" />
       </button>
       
       { showOk ?
-      <Modal
+     <div className="thanks">
+     <Modal
         show={show}
         onHide={handleClose}
         backdrop="static"
@@ -58,15 +59,14 @@ function CollbackModal() {
         <Modal.Body>
           <div className="modal_class">
             <img src="/images/thanks.svg" /> <h2>Спасибо!</h2>
-            <p>Ваша заявка была принята ожидайте, скоро Вам перезвонят</p>
-          </div>
-        </Modal.Body>
-        <Modal.Footer>
-          <button onClick={() => setShow(false)} className="collback__modal_bl">
+            <p className="thanks_title">Ваша заявка была принята ожидайте, скоро  Вам перезвонят</p>
+          </div><button onClick={() => setShow(false)} className="collback__modal_bl">
             Продолжить покупки
           </button>
-        </Modal.Footer>
+        </Modal.Body>
+        
       </Modal>
+     </div>
         :
       <Modal
         show={show}
@@ -75,10 +75,13 @@ function CollbackModal() {
         keyboard={false}
       >
         <Modal.Header closeButton>
-          <Modal.Title>Если у Вас остались вопросы</Modal.Title>
+          
         </Modal.Header>
         <Modal.Body>
-          <p>Оставьте заявку и мы обязательно Вам перезвоним</p>
+        <div className="mod_title">
+        Если у Вас остались вопросы
+        </div>
+          <p>Оставьте заявку и мы обязательно <br/> Вам перезвоним</p>
           <div className="input__modal">
             {" "}
             <img src="/images/nameM.svg" />{" "}
@@ -99,17 +102,16 @@ function CollbackModal() {
               placeholder="Номер телефона"
             />
           </div>
-        </Modal.Body>
-        <Modal.Footer>
-          <button
+           <button
             onClick={() => sendCollback()}
             className={showBtn ? "collback__modal_bl " : "collback__modal"}
           >
             Заказать звонок
           </button>
-        </Modal.Footer>
+        </Modal.Body>
+       
       </Modal>}
-    </>
+    </div>
   );
 }
 
