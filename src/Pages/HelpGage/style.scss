@@ -2,7 +2,11 @@
   display: flex;
   button{
   width: 644px;
+  .accordion-item{
+    height: 65px;
+  }
 
+  
   }
   h2 {
     text-align: left;
@@ -45,4 +49,8 @@
     width: 100%;
       }
   }
+}
+.accordion-button:not(.collapsed){
+  color: black;
+  background: none;
 }
