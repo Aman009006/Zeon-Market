@@ -1,0 +1,53 @@
+.signin_box {
+  width: 500px;
+  border: 1px solid #393939;
+  background: white;
+  padding: 15px;
+  margin-top: 30px;
+  .btns_for {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    a {
+      text-align: center;
+      width: 100px;
+      cursor: pointer;
+    }
+    .line {
+      width: 15px;
+    }
+  }
+  .login_inp{
+      p{
+          margin: 0px;
+          margin-top: 15px;
+          color: #393939;
+      }
+      display: block;
+      input{
+          width: 100%;
+          padding: 10px;
+          border: 1px solid #393939;
+          margin-top: 10px;
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+      }
+      button{
+        width: 100%;
+        padding: 10px;
+        border: none;
+        color: white;
+        background: black;
+        margin-top: 25px;
+      }
+      .with_gmail{
+          margin-bottom: 10px;
+      }
+  }
+}
+.img_logo_with{
+    width: 35px;
+    margin-right: 15px;
+}

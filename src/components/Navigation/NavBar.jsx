@@ -4,15 +4,20 @@ import HelperBtn from "../HelperBtn/HelperBtn";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
 import { useLocation, Navigate, useNavigate } from "react-router-dom";
 import axios from "axios";
+import {
+  createUserWithEmailAndPassword,
+  onAuthStateChanged,
+  signInWithEmailAndPassword,
+  signOut,
+} from "firebase/auth";
+import { auth } from "../../firebade-config";
 
 import "./style.scss";
 import SearchPage from "../../Pages/SearchPage/SearchPage";
 
 function NavBar({ handleData, getWord }) {
-  
   let basket = JSON.parse(localStorage.getItem("basket"));
   let favorite = JSON.parse(localStorage.getItem("favorite"));
-    
 
   window.addEventListener("basket", function () {
     console.log("hello");
@@ -51,9 +56,11 @@ function NavBar({ handleData, getWord }) {
         return "Избранные";
       case "help":
         return "Помощь";
-        case "cort":
+      case "cort":
         return "Корзина";
-        case "public":
+      case "login":
+        return "Авторизация";
+      case "public":
         return "Публичная оферта";
       default:
         return folder;
@@ -83,7 +90,7 @@ function NavBar({ handleData, getWord }) {
   function searchValue(e) {
     setWords(e.target.value);
     // setOpensearch(true)
-    
+
     axios(
       `https://still-island-00146.herokuapp.com/api/v1/store/products/?search=${words}`
     )
@@ -94,12 +101,25 @@ function NavBar({ handleData, getWord }) {
       .catch(function (error) {
         console.log(error);
       });
-
   }
   const [searchHis, setSearchHis] = useState(false);
   // console.log(location.pathname);
-  console.log(words.length);
   // words.length = 0 && setSearchHis(false)
+  function InLogin() {
+    Navigate("/login");
+  }
+
+  const [user, setUser] = useState({});
+
+  onAuthStateChanged(auth, (currentUser) => {
+    setUser(currentUser);
+  });
+  
+
+  const logOut = async () => {
+    await signOut(auth);
+
+  };
 
   return (
     <div className="navBar">
@@ -148,16 +168,17 @@ function NavBar({ handleData, getWord }) {
                     value={words}
                     onChange={(e) => {
                       searchValue(e);
-                      words.length === 0 ? setSearchHis(false):setSearchHis(true); 
+                      words.length === 0
+                        ? setSearchHis(false)
+                        : setSearchHis(true);
                     }}
                     className="search__input"
                   />
                   <button
                     onClick={() => {
-                    setSearchHis(false)
-                    Navigate("/search")
-                    }
-                    }
+                      setSearchHis(false);
+                      Navigate("/search");
+                    }}
                     className="search__btn"
                   >
                     <img src="/images/icons/search.svg" />
@@ -181,20 +202,32 @@ function NavBar({ handleData, getWord }) {
             <div className="nav__btns">
               <button className="nav__btn" id="favorite__btn">
                 <img src="/images/icons/favorite.svg" />{" "}
-               {favorite?.length > 0 && <div className="red__circle"></div>}
+                {favorite?.length > 0 && <div className="red__circle"></div>}
                 <span className="btn__title">
                   <NavLink to="/favorite">Избранное</NavLink>
                 </span>
               </button>
               <div className="line"></div>
               <button className="nav__btn" id="cort__btn">
-                {basket?.length>0 && <div className="red__circle"></div>}
+                {basket?.length > 0 && <div className="red__circle"></div>}
                 <img src="/images/icons/cort.svg" />{" "}
                 <span className="btn__title">
                   <NavLink to="/cort">Корзина</NavLink>{" "}
                 </span>
               </button>
             </div>
+
+            {user?.email ? (
+              <div className="login">
+                {" "}
+                <div>{user?.email}</div>{" "}
+                <div className="logoutNav" onClick={logOut}>
+                  Выйти
+                </div>{" "}
+              </div>
+            ) : (
+              <div onClick={()=> Navigate('/login')} className="sighin"> <div>Войти</div> <img src="/images/enter.png"/>  </div>
+            )}
           </div>
         </div>
         {bread && (
@@ -363,7 +396,7 @@ function NavBar({ handleData, getWord }) {
         </div>
       )}
 
-        <div className=" breadcrum-mobile">
+      <div className=" breadcrum-mobile">
         {bread && (
           <div className=" breadcrum">
             <div className="container">
@@ -390,7 +423,7 @@ function NavBar({ handleData, getWord }) {
             </div>
           </div>
         )}
-        </div>
+      </div>
       <div className="container">
         <HelperBtn />
       </div>
